@@ -66,3 +66,8 @@ En el repositorio abre **Settings → Pages**. En **Build and deployment**, elig
 - Si la API no responde o falla la conexión, se muestra un mensaje de error; si no hay coincidencias, se muestra un estado vacío.
 - La IA apoyó la creación de la estructura y la lógica; el equipo debe explicar y personalizar el código y esta reflexión.
 - GitHub Pages publica los archivos estáticos del repositorio seleccionado desde main y la carpeta raíz.
+
+
+## Publicación
+
+Sitio: https://jand1517.github.io/proyecto-web-ia/
