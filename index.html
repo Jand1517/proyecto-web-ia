@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101513">
+  <meta name="description" content="Explora personajes del universo de Rick and Morty: busca, filtra y guarda tus favoritos.">
+  <title>Portal Interdimensional · Rick and Morty</title>
+  <link rel="preconnect" href="https://rickandmortyapi.com">
+  <link rel="preconnect" href="https://rickandmortyapi.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Portal Interdimensional, inicio"><span class="brand-mark">R</span><span>ARCHIVO <b>INTERDIMENSIONAL</b></span></a>
+    <a class="api-link" href="https://rickandmortyapi.com/documentation" target="_blank" rel="noreferrer">Fuente de datos <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> BASE DE DATOS MULTIVERSAL <span class="eyebrow-line"></span> C-137</p>
+        <h1 id="page-title">Toda una<br>realidad <em>por explorar.</em></h1>
+        <p class="hero-description">Busca entre dimensiones, descubre quién es quién y guarda a los personajes que no quieres perder de vista.</p>
+        <a class="scroll-cue" href="#explorar"><span>↓</span> ABRIR ARCHIVO</a>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="portal"><span>?</span></div><span class="coordinate coord-a">47° 18′ N<br>UNKNOWN SECTOR</span><span class="coordinate coord-b">RICK-PORTAL // 001</span><span class="spark spark-a">✳</span><span class="spark spark-b">✦</span></div>
+      <div class="hero-index"><span>01 — 826</span><span>PERSONAJES INDEXADOS</span></div>
+    </section>
+
+    <section class="explorer" id="explorar" aria-labelledby="explore-title">
+      <div class="section-heading"><div><p class="eyebrow">DIRECTORIO DE ENTIDADES</p><h2 id="explore-title">Encuentra tu <em>universo.</em></h2></div><p class="section-note">Los registros se consultan en tiempo real.<br>Selecciona un filtro para afinar tu búsqueda.</p></div>
+      <form class="search-panel" id="search-form" role="search">
+        <label class="search-label" for="search-input">BUSCAR PERSONAJE</label>
+        <div class="search-row"><span class="search-icon" aria-hidden="true">⌕</span><input id="search-input" name="name" type="search" placeholder="Prueba con Rick, Morty, Summer..." autocomplete="off"><button class="search-button" type="submit">BUSCAR <span aria-hidden="true">↗</span></button></div>
+        <div class="filters">
+          <label>ESTADO<select id="status-filter" name="status"><option value="all">Todos</option><option value="alive">Vivo</option><option value="dead">Muerto</option><option value="unknown">Desconocido</option></select></label>
+          <label>ESPECIE<select id="species-filter" name="species"><option value="all">Todas las especies</option><option value="Human">Humano</option><option value="Alien">Alienígena</option></select></label>
+          <label>ORDEN<select id="sort-filter" name="sort"><option value="id">Recientes primero</option><option value="name">Nombre A–Z</option><option value="name-desc">Nombre Z–A</option></select></label>
+          <button class="favorites-toggle" id="favorites-toggle" type="button" aria-pressed="false"><span aria-hidden="true">♡</span> SOLO FAVORITOS <span id="favorite-count">0</span></button>
+        </div>
+      </form>
+
+      <div class="results-heading"><div><span class="live-indicator"></span><span id="results-label">REGISTROS DETECTADOS</span></div><p id="result-count" aria-live="polite">Conectando con la API…</p></div>
+      <p class="message" id="message" role="status" hidden></p>
+      <div class="character-grid" id="character-grid" aria-live="polite" aria-busy="true"></div>
+      <div class="load-more-wrap"><button class="load-more" id="load-more" type="button" hidden>EXPLORAR MÁS PERSONAJES <span aria-hidden="true">↓</span></button></div>
+      <div class="stats-strip"><div><span class="stat-number" id="stat-shown">—</span><span>EN PANTALLA</span></div><div><span class="stat-number" id="stat-favorites">0</span><span>FAVORITOS GUARDADOS</span></div><div><span class="stat-number" id="stat-page">—</span><span>PÁGINA ACTUAL</span></div><p>ESTADÍSTICAS EN VIVO <span>●</span></p></div>
+    </section>
+  </main>
+  <footer><a class="brand" href="#inicio"><span class="brand-mark">R</span><span>ARCHIVO <b>INTERDIMENSIONAL</b></span></a><p>Datos servidos por <a href="https://rickandmortyapi.com/" target="_blank" rel="noreferrer">The Rick and Morty API</a></p><span class="footer-code">© 2026 · SECTOR C-137</span></footer>
+</body>
+</html>
